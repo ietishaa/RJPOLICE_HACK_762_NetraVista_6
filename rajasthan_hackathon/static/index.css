@@ -1,0 +1,58 @@
+/* Add your custom styles for the landing page here */
+
+/* Styles from base.css are retained for elements used in the landing page */
+/* You can add specific styles for your landing page elements here */
+
+/* Example styling for the header section */
+.mainHeading {
+    padding: 100px 0;
+}
+
+.mainHeading__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mainHeading__text {
+    flex: 1;
+    padding: 20px;
+}
+
+.mainHeading__title {
+    font-size: 48px;
+    font-weight: 600;
+    color: #2d3c5d;
+}
+
+.mainHeading__description {
+    font-size: 18px;
+    line-height: 28px;
+    color: #696985;
+    margin-bottom: 30px;
+}
+
+.cta {
+    padding: 15px 30px;
+    border: none;
+    background-color: #2d3c5d;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #1a2536;
+}
+
+.mainHeading__image img {
+    width: 125%;
+    height: auto;
+    border-radius: 10px;
+    float: right;
+}
+/* Add more styles for other sections as needed */

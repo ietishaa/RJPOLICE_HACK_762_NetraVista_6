@@ -1,0 +1,353 @@
+.about {
+    --cubic: cubic-bezier(0.64, 0.01, 0.07, 1.65);
+    --transition: 0.6s var(--cubic);
+    --size: 40px;
+    position: fixed;
+    z-index: 10;
+    bottom: 10px;
+    right: 10px;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    transition: all 0.2s ease;
+}
+
+.about .bg_links {
+    width: var(--size);
+    height: var(--size);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(#000000, 0.2);
+    border-radius: 100%;
+    backdrop-filter: blur(5px);
+    position: absolute;
+}
+
+.about .logo {
+    width: var(--size);
+    height: var(--size);
+    z-index: 9;
+    background-image: url(https://rafaelavlucas.github.io/assets/codepen/logo_white.svg);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 10px 7px;
+    opacity: 0.9;
+    transition: all 1s 0.2s ease;
+    bottom: 0;
+    right: 0;
+}
+
+.about .social {
+    opacity: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.about .social .icon {
+    width: 100%;
+    height: 100%;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    display: flex;
+    transition: all 0.2s ease, background-color 0.4s ease;
+    opacity: 0;
+    border-radius: 100%;
+}
+
+.about .social.portfolio {
+    transition: all 0.8s ease;
+}
+
+.about .social.portfolio .icon {
+    background-image: url(https://rafaelavlucas.github.io/assets/codepen/link.svg);
+}
+
+.about .social.dribbble {
+    transition: all 0.3s ease;
+}
+
+.about .social.dribbble .icon {
+    background-image: url(https://rafaelavlucas.github.io/assets/codepen/dribbble.svg);
+}
+
+.about .social.linkedin {
+    transition: all 0.8s ease;
+}
+
+.about .social.linkedin .icon {
+    background-image: url(https://rafaelavlucas.github.io/assets/codepen/linkedin.svg);
+}
+
+.about:hover {
+    width: 105px;
+    height: 105px;
+    transition: all var(--transition);
+
+    .logo {
+        opacity: 1;
+        transition: all 0.6s ease;
+    }
+
+    .social {
+        opacity: 1;
+
+        .icon {
+            opacity: 0.9;
+        }
+
+        :hover {
+            background-size: 28px;
+
+            .icon {
+                background-size: 65%;
+                opacity: 1;
+            }
+        }
+
+        .portfolio {
+            right: 0;
+            bottom: calc(100% - 40px);
+            transition: all 0.3s 0s var(--cubic);
+
+            .icon {
+                :hover {
+                    background-color: #698fb7;
+                }
+            }
+        }
+
+        .dribbble {
+            bottom: 45%;
+            right: 45%;
+            transition: all 0.3s 0.15s var(--cubic);
+
+            .icon {
+                :hover {
+                    background-color: #ea4c89;
+                }
+            }
+        }
+
+        .linkedin {
+            bottom: 0;
+            right: calc(100% - 40px);
+            transition: all 0.3s 0.25s var(--cubic);
+
+            .icon {
+                :hover {
+                    background-color: #0077b5;
+                }
+            }
+        }
+    }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap");
+
+:root {
+    --font-01: "Raleway", sans-serif;
+    --gradient-02: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --gradient-01: linear-gradient(to top, #e6e6fa 0%, #e7f0fd 100%);
+    --m-01: #696985;
+    --m-02: #2d3c5d;
+}
+
+body {
+    font-family: var(--font-01);
+}
+
+.mainNav {
+    width: 100%;
+    height: 80px;
+    /* position: absolute; */
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--m-01);
+    text-transform: uppercase;
+    padding: 0 40px;
+}
+
+.mainNav__logo {
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.mainNav__links {
+    display: flex;
+}
+
+.mainNav__link {
+    letter-spacing: 1px;
+    font-size: 14px;
+    margin-left: 20px;
+    font-weight: 600;
+    box-shadow: inset 0px -10px 0px rgba(255, 255, 255, 0.5);
+    transition: all 0.4s ease, transform 0.2s ease;
+    padding: 2px 4px;
+    transform: translateY(0px);
+
+    :hover {
+        transform: translateY(-5px);
+        box-shadow: inset 0px -20px 0px white;
+    }
+}
+
+.mainNav__icon {
+    background-image: url(https://rafaelalucas91.github.io/assets/icons/black/icon-141.svg);
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+}
+
+
+.cta {
+    padding: 16px 32px;
+    color: var(--m-02);
+    background-color: transparent;
+    border: 1px solid rgba(var(--m-02), 0.4);
+    font-family: var(--font-01);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-top: 32px;
+    cursor: pointer;
+    box-shadow: inset 0px 0px 0px rgba(var(--m-02), 0.2);
+    transition: all 0.4s ease;
+
+    :hover {
+        border: 1px solid rgba(var(--m-02), 0.1);
+        box-shadow: inset 0px -80px 0px rgba(var(--m-02), 0.1);
+        transform: translateY(-5px);
+    }
+
+    @media screen and (max-width: 799px) {
+        margin-top: 16px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0;
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+
+    :focus {
+        outline: 0;
+    }
+}
+.footer-dark {
+    padding: 50px 0;
+    color: var(--m-02);
+    background-color: var(--gradient-01);
+}
+  
+  .footer-dark h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+  
+  .footer-dark ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+  }
+  
+  .footer-dark ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity:0.8;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+      text-align:center;
+      padding-bottom:20px;
+    }
+  }
+  
+  .footer-dark .item.text {
+    margin-bottom:36px;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item.text {
+      margin-bottom:0;
+    }
+  }
+  
+  .footer-dark .item.text p {
+    opacity: 0.6;
+    margin-bottom: 0;
+    text-align: center;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+  .footer-dark .item.social {
+    text-align:center;
+  }
+  
+  @media (max-width:991px) {
+    .footer-dark .item.social {
+      text-align:center;
+      margin-top:20px;
+    }
+  }
+  
+  .footer-dark .item.social > a {
+    font-size:35px;
+    width:36px;
+    height:36px;
+    line-height:36px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+    margin:0 8px;
+    color:#2d3c5d;
+    opacity:0.75;
+  }
+  
+  .footer-dark .item.social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-dark .copyright {
+    text-align:center;
+    padding-top:24px;
+    opacity:0.3;
+    font-size:13px;
+    margin-bottom:0;
+  }
+  .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }

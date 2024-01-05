@@ -1,0 +1,55 @@
+<!-- add_edit_camera.html -->
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    <title>Add/Edit Camera</title>
+{% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{% static "add_camera.css" %}"> {% endblock %}
+
+{% block content %}
+    <div id="form-container">
+        <h2>Add/Edit Camera</h2>
+        <form action="{% url 'add_camera' %}" method="post">
+            {% csrf_token %}
+            
+            <label for="model">Camera Model:</label>
+            <input type="text" id="model" name="model" required>
+
+            <label for="manufacturer">Brand/Manufacturer:</label>
+            <input type="text" id="manufacturer" name="manufacturer" required>
+
+            <label for="resolution">Resolution:</label>
+            <input type="text" id="resolution" name="resolution" required>
+
+            <label for="fov">Field of View (FOV):</label>
+            <input type="text" id="fov" name="fov" required>
+
+            <label for="sensor">Sensor Type:</label>
+            <input type="text" id="sensor" name="sensor" required>
+
+            <label for="lens">Lens Type:</label>
+            <input type="text" id="lens" name="lens" required>
+
+            <label for="recording">Recording Capabilities:</label>
+            <input type="text" id="recording" name="recording" required>
+
+            <label for="connectivity">Connectivity:</label>
+            <input type="text" id="connectivity" name="connectivity" required>
+
+            <label for="power">Power Source:</label>
+            <input type="text" id="power" name="power" required>
+
+            <label for="latitude">Latitude:</label>
+            <input type="text" id="latitude" name="latitude" required>
+
+            <label for="longitude">Longitude:</label>
+            <input type="text" id="longitude" name="longitude" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}
