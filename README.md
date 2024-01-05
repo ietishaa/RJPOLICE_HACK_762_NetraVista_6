@@ -41,6 +41,6 @@ Ensure that the frontend is configured to communicate with the backend API endpo
 The project is designed to optimize public safety, enhance law enforcement responses, and promote community collaboration.
 Privacy-preserving practices are implemented to maintain public trust in the geo-tagging initiative.
 
-### Disclaimer: This project is developed for educational purposes and may require adjustments for real-world deployment. The accuracy of AI and ML processes may vary based on the available data and environment.
+#### Disclaimer: This project is developed for educational purposes and may require adjustments for real-world deployment. The accuracy of AI and ML processes may vary based on the available data and environment.
 
-### Contributions and Issues: Contributions and issue reports are welcome. Please follow the contribution guidelines outlined in the project repository
+##### Contributions and Issues: Contributions and issue reports are welcome. Please follow the contribution guidelines outlined in the project repository
